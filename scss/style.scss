@@ -21,7 +21,7 @@ a {
 
 html, body {
   position: relative;
-  // min-height: 100%;
+  height: 100%;
 }
 
 body {
@@ -30,19 +30,40 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   color:#fff;
-  overflow-y: scroll;
+  background-color: #000;
 }
 
 .swiper-container {
   width: 100%;
-  min-height: 100vh;
-  // height: auto;
+  height: 100%;
+}
+
+.swiper-wrapper {
+  height: 100%;
 }
 
 .swiper-slide {
-  min-height: 100vh;
-  padding-bottom: 30px;
-  background-attachment: fixed;
+  position: relative;
+  height: 100%;
+
+  .fixed-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .scroll-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
 }
 
 .swiper-pagination {
@@ -65,10 +86,12 @@ body {
 }
 
 .swiper-button-prev {
+  left: 25px;
   background: url('../images/sprite.png') -37px 0px no-repeat;
 }
 
 .swiper-button-next {
+  right: 25px;
   background: url('../images/sprite.png') -60px 0px no-repeat;
 }
 
@@ -123,6 +146,8 @@ body {
 
 // Slide INFO
 .slide-info {
+  padding-bottom: 40px;
+
   .info-head {
     display: flex;
     align-items: center;
@@ -182,10 +207,13 @@ body {
 
 // Slide #2
 .slide-two {
-  padding-top: 65px;
-  background: url('../images/bg/bg2.jpg');
-  background-size: cover;
-  background-position: center;
+  .fixed-container {
+    background-image: url('../images/bg/bg2.jpg');
+  }
+
+  .scroll-container {
+    padding-top: 65px;
+  }
 
   .slide-info {
     .info-desc {
@@ -201,10 +229,11 @@ body {
 
 // Slide #3
 .slide-three {
-  padding-top: 110px;
-  background-color: #000;
-  background-size: contain;
-  background-position: center;
+  .fixed-container {}
+
+  .scroll-container {
+    padding-top: 110px;
+  }
 
   .slide-info {
     .info-desc {
@@ -226,11 +255,13 @@ body {
 
 // Slide #4
 .slide-four {
-  padding-top: 75px;
-  background: url('../images/bg/bg3.jpg');
-  background-color: #000;
-  background-size: cover;
-  background-position: center;
+  .fixed-container {
+    background-image: url('../images/bg/bg3.jpg');
+  }
+
+  .scroll-container {
+    padding-top: 75px;
+  }
 
   .slide-info {
     .info-desc {
@@ -253,8 +284,13 @@ body {
 
 // Slide #5
 .slide-five {
-  padding-top: 30px;
-  background-color: #000;
+  .fixed-container {
+    
+  }
+
+  .scroll-container {
+    padding-top: 30px;
+  }
 
   .slide-info .info-desc {
     width: 460px;
@@ -263,16 +299,24 @@ body {
 
 // Slide #6
 .slide-six {
-  background-color: #000;
+  .fixed-container {
+    
+  }
+
+  .scroll-container {
+    
+  }
 }
 
 // Slide #7
 .slide-seven {
-  padding-top: 200px;
-  background: url('../images/bg/bg2.jpg');
-  background-color: #000;
-  background-size: cover;
-  background-position: center;
+  .fixed-container {
+    background-image: url('../images/bg/bg2.jpg');
+  }
+
+  .scroll-container {
+    padding-top: 200px;
+  }
 
   .slide-info {
     .list {
@@ -288,11 +332,13 @@ body {
 
 // Slide #8
 .slide-eight {
-  padding-top: 110px;
-  background: url('../images/bg/bg2.jpg');
-  background-color: #000;
-  background-size: cover;
-  background-position: center;
+  .fixed-container {
+    background-image: url('../images/bg/bg2.jpg');
+  }
+
+  .scroll-container {
+    padding-top: 110px;
+  }
 
   .info-head {
     margin-bottom: 150px;
@@ -327,3 +373,19 @@ body {
     }
   }
 }
+
+.video-container {
+  
+  width: 100%;
+  height: 100%;
+}
+
+// #main-video {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   width: 100%;
+//   height: 100%;
+// }

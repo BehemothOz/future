@@ -1,0 +1,329 @@
+@font-face {
+  font-family: "Proxi";
+  src: url("../fonts/proximanova-black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: #fff;
+}
+
+html, body {
+  position: relative;
+  // min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color:#fff;
+  overflow-y: scroll;
+}
+
+.swiper-container {
+  width: 100%;
+  min-height: 100vh;
+  // height: auto;
+}
+
+.swiper-slide {
+  min-height: 100vh;
+  padding-bottom: 30px;
+  background-attachment: fixed;
+}
+
+.swiper-pagination {
+  position: fixed;
+  top: 23px;
+  left: auto;
+  right: 23px;
+  width: 95px;
+  height: 50px;
+  font-size: 18px;
+  line-height: 50px;
+  background-color: rgba(128, 128, 128, 0.96);
+  border-radius: 30px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 25px;
+  height: 39px;
+}
+
+.swiper-button-prev {
+  background: url('../images/sprite.png') -37px 0px no-repeat;
+}
+
+.swiper-button-next {
+  background: url('../images/sprite.png') -60px 0px no-repeat;
+}
+
+.container-main {
+  width: 1024px;
+  // height: 911px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.icon {
+  display: block;
+  margin-left: 35px;
+
+  &.icon-lightning {
+    width: 38px;
+    height: 66px;
+    background: url('../images/ic-2.png');
+  }
+
+  &.icon-heart {
+    width: 66px;
+    height: 60px;
+    background: url('../images/ic-1.png');
+  }
+
+  &.icon-book {
+    width: 83px;
+    height: 73px;
+    background: url('../images/ic-3.png');
+  }
+
+  &.icon-hand {
+    width: 63px;
+    height: 83px;
+    background: url('../images/ic-4.png');
+  }
+
+  &.icon-text {
+    width: 132px;
+    height: 89px;
+    background: url('../images/ic-5.png');
+  }
+}
+
+.circle-block {
+  width: 369px;
+  height: 369px;
+  background-color: green;
+  border-radius: 100%;
+}
+
+// Slide INFO
+.slide-info {
+  .info-head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 65px;
+  }  
+
+  .logo {
+    width: 151px;
+    height: auto;
+  }
+
+  .info-title {
+    margin-bottom: 40px;
+    font-family: "Proxi";
+    font-size: 45px;
+    line-height: 58px;
+    font-weight: 900;
+  }
+
+  .info-inner-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    .circle-block {
+      flex: 1 0 auto;
+    }
+  }
+
+  .info-desc {
+    .title {
+      margin-bottom: 15px;
+      font-family: "Proxi";
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    .list {
+      margin-bottom: 20px;
+
+      li {
+        font-size: 18px;
+        line-height: 23px;
+      }
+    }
+  }
+}
+
+// Slide #1
+.slide-one {
+  background-color: #000;
+}
+
+// Slide #2
+.slide-two {
+  padding-top: 65px;
+  background: url('../images/bg/bg2.jpg');
+  background-size: cover;
+  background-position: center;
+
+  .slide-info {
+    .info-desc {
+      padding-right: 55px;
+    }
+
+    .circle-block {
+      align-self: flex-end;
+      background: url('../images/circle/1.jpg');
+    }
+  }
+}
+
+// Slide #3
+.slide-three {
+  padding-top: 110px;
+  background-color: #000;
+  background-size: contain;
+  background-position: center;
+
+  .slide-info {
+    .info-desc {
+      .title {
+        margin-bottom: 40px;
+      }
+    }
+
+    .info-desc {
+      padding-right: 140px;
+    }
+
+    .circle-block {
+      align-self: flex-start;
+      background: url('../images/circle/2.jpg');
+    }
+  }
+}
+
+// Slide #4
+.slide-four {
+  padding-top: 75px;
+  background: url('../images/bg/bg3.jpg');
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+
+  .slide-info {
+    .info-desc {
+      .list {
+        padding-right: 140px;
+        padding-bottom: 50px;
+
+        li {
+          margin-bottom: 25px;
+        }
+      }
+    }
+
+    .circle-block {
+      align-self: flex-end;
+      background: url('../images/circle/3.jpg');
+    }
+  }
+}
+
+// Slide #5
+.slide-five {
+  padding-top: 30px;
+  background-color: #000;
+
+  .slide-info .info-desc {
+    width: 460px;
+  }
+}
+
+// Slide #6
+.slide-six {
+  background-color: #000;
+}
+
+// Slide #7
+.slide-seven {
+  padding-top: 200px;
+  background: url('../images/bg/bg2.jpg');
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+
+  .slide-info {
+    .list {
+      margin-bottom: 30px;
+
+      li {
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+  }  
+}
+
+// Slide #8
+.slide-eight {
+  padding-top: 110px;
+  background: url('../images/bg/bg2.jpg');
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+
+  .info-head {
+    margin-bottom: 150px;
+  }
+
+  .info-title {
+    margin-bottom: 100px;
+  }
+
+  .slide-info {
+    .list-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      width: 570px;
+    }
+
+    .list {
+      width: 50%;
+
+      li {
+        line-height: 26px;
+      }
+
+      .name {
+        font-family: "Proxi";
+      }
+    }
+
+    .list:nth-of-type(1),
+    .list:nth-of-type(3) {
+      padding-right: 15px;
+    }
+  }
+}

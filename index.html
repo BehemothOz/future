@@ -28,13 +28,17 @@
               <!-- <iframe id="video_video_83" src="https://www.youtube.com/embed/nPMulqDInaQ?wmode=opaque&amp;enablejsapi=1&amp;playlist=&amp;autohide=1&amp;loop=1&amp;showinfo=0&amp;theme=dark&amp;controls=0&amp;html5=1&amp;rel=0&amp;vq=hd1080" width="640" height="320" frameborder="0" allowfullscreen="" class="fade-out"></iframe> -->
               <iframe width="100%" height="100%" src="https://www.youtube.com/embed/nPMulqDInaQ?modestbranding=1&autoplay=1&controls=0&fs=0&loop=1&rel=0&showinfo=0" frameborder="0"></iframe>
             <!-- </div> -->
-          
 
         </div>
 
         <div class="scroll-container">
           <div class="container-main">
-              <h1>Slide 1 VIDEO</h1>
+            <div class="slide-info">
+              <div class="info-head">
+                <img class="logo" src="images/logo.png" alt="logo">
+              </div>
+              <div class="circle-block"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -69,7 +73,9 @@
 
       <!-- Slide 3 -->
       <div class="swiper-slide slide-three">
-        <div class="fixed-container"></div>
+        <div class="fixed-container">
+          <div class="overlay"></div>
+        </div>
 
         <div class="scroll-container">
           <div class="container-main">
@@ -112,7 +118,9 @@
 
       <!-- Slide 4 -->
       <div class="swiper-slide slide-four">
-        <div class="fixed-container"></div>
+        <div class="fixed-container">
+          <div class="overlay"></div>
+        </div>
 
         <div class="scroll-container">
           <div class="container-main">
@@ -142,7 +150,10 @@
 
       <!-- Slide 5 -->
       <div class="swiper-slide slide-five">
-        <div class="fixed-container"></div>
+        <div class="fixed-container">
+          <div class="overlay"></div>
+          <div class="overlay-mask"><div class="overlay"></div></div>
+        </div>
 
         <div class="scroll-container">
           <div class="container-main">
@@ -157,13 +168,38 @@
                 <p>You will find yourself in an unusual world, inhabited by aliens, fantastic flowers and plants from other planets, which will be fun to interact with for children and adults alike. The exhibited objects have been created by an international team of producers and interactive design studios from Latvia and Russia, who have used the latest UX-design developments.</p>  
               </div>  
             </div>
+
+            <div class="swiper-container swiper-mini">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide m-slide-one"></div>
+                <div class="swiper-slide m-slide-two"></div>
+                <div class="swiper-slide m-slide-three"></div>
+                <div class="swiper-slide m-slide-four"></div>
+                <div class="swiper-slide m-slide-five"></div>
+                <div class="swiper-slide m-slide-six"></div>
+                <div class="swiper-slide m-slide-seven"></div>
+                <div class="swiper-slide m-slide-eigth"></div>
+              </div>
+
+              <!-- Add Pagination -->
+              <!-- <div class="swiper-pagination m-swiper-pagination"></div> -->
+              <!-- Add Arrows -->
+              <!-- <div class="m-swiper-button-next"></div>
+              <div class="m-swiper-button-prev"></div> -->
+            </div>
+
           </div>
         </div>
       </div>
 
       <!-- Slide 6 -->
       <div class="swiper-slide slide-six">
-        <div class="fixed-container"></div>
+        <div class="fixed-container">
+          <div class="video-container">
+            <!-- <img class="poster" src="https://i.ytimg.com/vi/jHbwge9IN_I/hqdefault.jpg"> -->
+            <iframe src="https://www.youtube.com/embed/jHbwge9IN_I?wmode=opaque&amp;enablejsapi=1&amp;playlist=&amp;autohide=1&amp;loop=1&amp;showinfo=0&amp;theme=dark&amp;controls=0&amp;html5=1&amp;rel=0&amp;vq=hd1080" width="100%" height="100%" frameborder="0" allowfullscreen=""></iframe>
+          </div>
+        </div>
 
         <div class="scroll-container">
           <div class="container-main">
@@ -255,7 +291,6 @@
     var swiper = new Swiper('.swiper-container', {
       speed: 700,
       
-
       pagination: {
         el: '.swiper-pagination',
         type: 'fraction',
@@ -264,6 +299,23 @@
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+  <script>
+    var swiper = new Swiper('.swiper-mini', {
+      autoplay: {
+        delay: 2000,
+      },
+      loop: true,
+      speed: 700,
+      pagination: {
+        el: '.m-swiper-pagination',
+        type: 'fraction',
+      },
+      navigation: {
+        nextEl: '.m-swiper-button-next',
+        prevEl: '.m-swiper-button-prev',
       },
     });
   </script>

@@ -26,7 +26,8 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   color: #fff;
-  background-color: #000; }
+  background-color: #000;
+  overflow: hidden; }
 
 .swiper-container {
   width: 100%;
@@ -58,11 +59,11 @@ body {
     overflow-x: hidden;
     overflow-y: auto; }
 
-.swiper-pagination {
+.swiper-global .g-swiper-pagination {
   position: fixed;
   top: 23px;
   left: auto;
-  right: 23px;
+  right: 80px;
   width: 95px;
   height: 50px;
   font-size: 18px;
@@ -70,18 +71,44 @@ body {
   background-color: rgba(128, 128, 128, 0.96);
   border-radius: 30px; }
 
-.swiper-button-prev,
-.swiper-button-next {
+.swiper-global .g-swiper-button-prev,
+.swiper-global .g-swiper-button-next {
   width: 25px;
   height: 39px; }
 
-.swiper-button-prev {
+.swiper-global .g-swiper-button-prev {
   left: 25px;
   background: url("../images/sprite.png") -37px 0px no-repeat; }
 
-.swiper-button-next {
+.swiper-global .g-swiper-button-next {
   right: 25px;
   background: url("../images/sprite.png") -60px 0px no-repeat; }
+
+.swiper-mini {
+  margin-bottom: 50px;
+  height: 500px; }
+  .swiper-mini .swiper-slide {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .swiper-mini .m-slide-one {
+    background-image: url("../images/slider/1.jpg"); }
+  .swiper-mini .m-slide-two {
+    background-image: url("../images/slider/2.gif"); }
+  .swiper-mini .m-slide-three {
+    background-image: url("../images/slider/3.jpg"); }
+  .swiper-mini .m-slide-four {
+    background-image: url("../images/slider/4.jpg"); }
+  .swiper-mini .m-slide-five {
+    background-image: url("../images/slider/5.jpg"); }
+  .swiper-mini .m-slide-six {
+    background-image: url("../images/slider/6.jpg"); }
+  .swiper-mini .m-slide-seven {
+    background-image: url("../images/slider/7.jpg"); }
+  .swiper-mini .m-slide-eigth {
+    background-image: url("../images/slider/8.jpg"); }
 
 .container-main {
   width: 1024px;
@@ -244,32 +271,6 @@ body {
 .slide-five .slide-info .info-desc {
   width: 460px; }
 
-.slide-five .swiper-mini {
-  margin-bottom: 50px;
-  height: 500px; }
-  .slide-five .swiper-mini .swiper-slide {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; }
-  .slide-five .swiper-mini .m-slide-one {
-    background-image: url("../images/slider/1.jpg"); }
-  .slide-five .swiper-mini .m-slide-two {
-    background-image: url("../images/slider/2.gif"); }
-  .slide-five .swiper-mini .m-slide-three {
-    background-image: url("../images/slider/3.jpg"); }
-  .slide-five .swiper-mini .m-slide-four {
-    background-image: url("../images/slider/4.jpg"); }
-  .slide-five .swiper-mini .m-slide-five {
-    background-image: url("../images/slider/5.jpg"); }
-  .slide-five .swiper-mini .m-slide-six {
-    background-image: url("../images/slider/6.jpg"); }
-  .slide-five .swiper-mini .m-slide-seven {
-    background-image: url("../images/slider/7.jpg"); }
-  .slide-five .swiper-mini .m-slide-eigth {
-    background-image: url("../images/slider/8.jpg"); }
-
 .slide-seven .fixed-container {
   background-image: url("../images/bg/bg2.jpg"); }
 
@@ -313,8 +314,38 @@ body {
 .slide-eight .slide-info .list:nth-of-type(3) {
   padding-right: 15px; }
 
-.video-container {
+.menu-swiper-global {
+  position: absolute;
+  left: 0;
+  bottom: 0;
   width: 100%;
-  height: 100%; }
+  height: 184px;
+  background-color: lightgreen;
+  z-index: 100;
+  -webkit-transform: translateY(184px);
+  -ms-transform: translateY(184px);
+  transform: translateY(184px);
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
+  -o-transition: transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease; }
+  .menu-swiper-global.show {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0); }
+
+.btn-toggle-menu {
+  position: fixed;
+  top: 23px;
+  right: 23px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(128, 128, 128, 0.96);
+  border: none;
+  border-radius: 100%;
+  outline: none;
+  z-index: 100;
+  cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */
